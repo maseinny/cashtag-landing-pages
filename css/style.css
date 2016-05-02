@@ -1,0 +1,240 @@
+body { margin: 0; font-family: 'Roboto', sans-serif; font-weight: 300; color: #111111; width: 100%; overflow-x: hidden; }
+header, footer { background-color: #444349; }
+section { text-align: center; padding: 45px 0px; }
+ul { list-style-type: none;}
+a { text-decoration: none; }
+h1 { text-transform: uppercase; }
+.wrapper { max-width: 1000px; margin: 0 auto; position: relative;}
+
+section h1 { font-size: 68px; color: #111111; margin-top: 25px; letter-spacing: 2px; position: relative; display: inline-block; margin-bottom: -63px; z-index: 50; }
+section h2 { font-size: 36px; font-weight: 400; margin-bottom: 0px; }
+section h3 { font-weight: 300; font-size: 23px; width: 350px; margin: 0 auto; line-height: 31px;}
+h4 { text-align: left; font-weight: 300; font-size: 30px; margin: 10px 0; }
+hr { width: 50px; border: 2px solid #21CE99; margin-top: 10px; }
+
+.logo { display: inline-block; vertical-align: middle; margin: 17px 10px; color: #21CE99; font-weight: 500; width: 115px; }
+header a { color: #21CE99; }
+header .nav { display: inline-block; vertical-align: middle; position: absolute; right: 0; top: 6px; }
+.nav li { display: inline-block; text-align: right; margin: 0px 25px; }
+
+.icon-img { display: block; margin: 22px auto; width: 98px; }
+
+/* Hidden */
+.mobile-nav, .nav-trigger,
+#google-form-existing, #google-form-new, 
+.cashback-calc,
+.error, .zero { 
+	display: none; 
+}
+
+/* Footer */
+footer { padding: 50px; text-align: center; }
+footer a, footer p { color: #ffffff; }
+footer p { font-weight: 500; }
+.footer-contact ul, .footer-link ul { padding-left: 0; display: inline-block; }
+.footer-contact li, .footer-link li { display: inline-block; margin: 0px 15px; line-height: 26px; }
+.footer-contact li { margin: 0px 20px; }
+.trademark { font-size: 14px; font-weight: 400; }
+.fa { margin-right: 10px; font-size: 26px !important; }
+
+/* Global Form Styling */
+input.form-input { margin-top: 8px; width: 100%; border-radius: 8px; background-color: transparent; border: 1px solid #000000; height: 50px; padding: 10px; font-size: 16px; } 
+button { display: inherit; text-align: center; background-color: #21CE99; margin: 50px auto; width: 290px; color: #ffffff; border-radius: 8px; padding: 20px; border: none; font-size: 17px; font-weight: 300; font-family: 'Roboto', sans-serif; }
+
+/* Global Table Styling */
+th { font-weight: 400; border-top: 1px solid #000000; }
+td { font-weight: 300; }
+
+/* top-left border-radius */
+table tr:first-child th:first-child, 
+table.Info tr:first-child td:first-child { border-top-left-radius: 6px; }
+/* top-right border-radius */
+table tr:first-child th:last-child, 
+table.Info tr:first-child td:last-child { border-top-right-radius: 6px; }
+/* bottom-left border-radius */
+table tr:last-child td:first-child { border-bottom-left-radius: 6px; }
+/* bottom-right border-radius */
+table tr:last-child td:last-child { border-bottom-right-radius: 6px; }
+
+table .highlight { color: #21CE99; font-weight: 500; }
+
+
+
+/* -------------- REFER A FRIEND -------------- */
+
+/*   Section _ It Pays to Gossip    */
+#hero-chats { background: url('images/hero_chats.png') no-repeat; background-size: 208px; position: relative; left: 63px; top: -97px; height: 125px; z-index: -10;  }
+.info-box { display: inline-block; margin: 30px 30px 0; /*padding: 35px 0; width: 290px;*/ }
+.info-box p { font-size: 20px; font-weight: 400; margin: 0; }
+.info-box span { color: #21CE99; font-size: 50px; font-weight: 600; }
+
+/*   Section _ Link    */
+.instructions { background-color: #ededed; }
+.instructions p { font-size: 26px; line-height: 42px; margin: 35px; }
+.color { color: #21CE99; font-weight: 500; }
+.radio-toggle { margin: 50px; }
+.link-copy { background-color: #21CE99; border-radius: 8px; color: #ffffff; max-width: 500px; margin: 0 auto; padding: 30px 0; font-size: 18px; font-weight: 500; }
+.link-copy.small { max-width: 400px; font-size: 15px; padding: 25px 0; }
+
+/*   Section _ Form    */
+.form { background-color: #ededed; }
+.question { display: inline-block; margin: 0px 3px 0px 20px; cursor: pointer; font-size: 18px; }
+form span { font-weight: 600; }
+input[type=radio] { visibility: hidden; cursor: pointer; }
+
+input.radio:empty ~ label {
+	position: relative;
+	float: left;
+	text-indent: 1.5em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+input.radio:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	border: 1px solid #000000;
+}
+
+/* toggle hover */
+input.radio:hover:not(:checked) ~ label:before {
+	content:'\2022';
+	text-indent: -1px;
+	color: #C2C2C2;
+	font-size: 46px;
+	line-height: 17px;
+}
+/* toggle on */
+input.radio:checked ~ label:before {
+	content:'\2022';
+	text-indent: -1px;
+	color: #21CE99;
+	font-size: 46px;
+	line-height: 17px;
+}
+/* radio focus */
+input.radio:focus ~ label:before {
+	box-shadow: 0 0 0 3px #999;
+}
+
+/*   Google Form   */
+#google-form-existing p, #google-form-new p { margin: 35px; line-height: 26px; font-size: 14px; }
+fieldset { border:none; display: inline-block; width: 290px; font-size: 14px; text-align: left; line-height: 20px; } /*form input div styling*/
+a.what { text-align: right; cursor: pointer; display: block; color: #21CE99; text-decoration: underline; font-weight: 400; margin-top: 5px; margin-right: 5px; font-size: 12px; }
+img.screenshot { width: 290px; display: block; margin-top: 5px; display: none; }
+.submitted { display: none; text-align: center; font-weight: 500; font-size: 20px; padding: 20px; }
+
+
+/*   Section _ How Does It Work   */
+.black { background-color: #111111; color: #ffffff; }
+.steps { margin: 50px 0; }
+.steps div { display: inline-block; width: 250px; margin: 0px 30px; }
+.steps p { font-size: 18px; line-height: 26px; }
+.steps span { font-size: 30px; font-weight: 500; }
+.asterisks { font-size: 12px; }
+.asterisks p { margin: 10px 0; }
+
+/*   Section _ Rules   */
+.rules .steps div { margin: 0 40px; width: 250px; }
+.rules p { font-size: 18px; }
+
+
+/* -------------- CASH-BACK -------------- */
+.cash-back h1 { font-size: 32px; font-weight: 400; text-transform: none; margin: 50px 0 10px; }
+.deposit-amount-skrill, .deposit-amount-nt { margin: 50px auto; max-width: 450px; text-align: left; }
+.divide { border: 1px solid #ededed; margin-top: 90px; margin-bottom: 20px; width: 275px; }
+.lowkeylink { text-decoration: underline; color: inherit; }
+
+.steps.cash-back-rules div { margin: 0 60px; }
+
+/* Cash back amounts outputs */
+.cash-back-amounts, .mobile-cash-back-amounts { background-color: #ededed; border-radius: 8px; max-width: 800px; margin: 50px auto; }
+.cash-back-amounts table { width: 100%; line-height: 28px; }
+.cash-back-amounts tr td:first-child { text-align: left; padding: 50px 20px 35px 50px; }
+.cash-back-amounts tr td:last-child { text-align: right; font-weight: 600; font-size: 40px; color: #21CE99; padding: 50px 50px 50px 20px; }
+/*.cash-back-amounts tr:first-child td { padding: 50px 50px 35px; }*/
+.cash-back-amounts table tr:last-child td { padding-bottom: 50px; padding-top: 0; }
+.mobile-cash-back-amounts { display: none; text-align: center; padding: 30px 40px 5px; }
+.mobile-cash-back-amounts .output { font-weight: 600; font-size: 40px; color: #21CE99; margin: 10px 0 35px; }
+
+.zero { max-width: 350px; margin: 0px auto 25px; }
+.zero p { color: #21CE99; font-weight: 400; text-align: center; }
+.error p { color: red; font-weight: 400; }
+/* Skrill + NT tables */
+.table { border-spacing: 0; width: 100%; text-align: center; color: #333333; }
+.table tr th, .table tr td { border-right: 1px solid #000000; border-bottom: 1px solid #000000; padding: 23px 20px; }
+.table tr th:first-child, .table tr td:first-child { border-left: 1px solid #000000; }
+.table tr th:first-child, .table tr td:first-child { border-left: 1px solid #000000; }
+
+
+/* -------------- CONTACT -------------- */
+.contact { padding: 55px 0 0; }
+.contact fieldset { display: block; margin: 45px auto; width: 450px; }
+.contact fieldset:first-child { margin-top: 66px; }
+textarea { display: block; border-radius: 8px; width: 450px; min-height: 180px; margin-top: 8px; }
+.required { margin: 15px 0 0; }
+.contact button { margin: 70px auto 80px; }
+.contact-submitted { display: none; padding: 45px 0 0; margin-bottom: -20px; }
+.contact-submitted p { display: inline-block; background-color: #21CE99; color: #ffffff; border-radius: 8px; padding: 10px 20px; font-weight: 400; }
+
+
+/* ------ RESPONSIVE ------ */
+@media (max-width: 941px) {
+
+	/* REFER A FRIEND */
+	.wrapper { padding: 0 20px; }
+	form { padding: 0 10px; }
+	form span { display: block; margin: 10px; }
+	.radio-toggle { border-bottom: 1px solid #cccccc; padding-bottom: 40px; }
+}
+
+@media (max-width: 768px) {
+	header { position: relative; width: 100%; z-index: 100; }
+	header .nav { display: none; }
+	header a { display: inline-block; margin-left: 30px; }
+	.first { padding-top: 90px; }
+	.mobile-nav { display: block; background-color: #444349; width: 200px; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 0; margin-top: 0; padding: 10px; }
+	.mobile-nav li { padding: 15px; font-weight: 400; }
+	.mobile-nav a { color: #ffffff; }
+	.site-wrap { min-width: 100%; min-height: 100%; background-color: #ffffff; position: relative; top: 0; bottom: 100%; left: 0;h1 }
+	.nav-trigger { display: block; position: absolute; clip: rect(0, 0, 0, 0); }
+	.nav-trigger:checked + label { left: 215px; }
+	.nav-trigger:checked ~ .site-wrap { left: 200px; }
+	label[for="nav-trigger"] { 
+		position: fixed; top: 17px; left: 15px; 
+		width: 30px; height: 29px; cursor: pointer; background-image: url('images/menu.png'); background-size: contain; z-index: 200;
+	}
+	.steps.cash-back-rules div { margin: 0; width: 250px; }
+} 
+
+@media (max-width: 750px) {
+	.table tr th, .table tr td { padding: 10px; }
+	footer { padding: 38px; }
+}
+
+@media (max-width: 567px) {
+	.mobile-cash-back-amounts { display: block; }
+	.cash-back-amounts { display: none; }
+	.table tr th, .table tr td { padding: 5px 3px; font-size: 12px; }
+	.footer-contact li { margin: 0; }
+}
+
+@media (min-width: 491px) and (max-width: 674px) {
+	#hero-chats { left: 125px; top: -90px; }
+}
+
+@media (max-width: 495px) {
+	/* CONTACT */
+	.contact fieldset { max-width: 450px; width: auto; }
+	textarea { max-width: 450px; width: auto; min-width: 350px }
+}
+

@@ -1,0 +1,280 @@
+<html>
+<head>
+	<title>Cas#Tag Refer a Friend</title>
+	<link rel="stylesheet" tyle="text/css" href="css/style.css" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+</head>
+
+<body>
+	<ul class="mobile-nav">
+		<li><a href="http://cashtag.net/login">Log In</a></li>
+		<li><a href="http://cashtag.net/personal_tracker/">Become a VIP</a></li>
+		<li><a href="http://cashtag.net/register/">Become a Partner</a></li>
+		<li><a href="http://cashtag.net/pages/about">About</a></li>
+		<li><a href="http://cashtag.net/contact/">Contact</a></li>
+	</ul>
+	<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+	<label for="nav-trigger"></label>
+	<div class="site-wrap">
+		<header>
+			<div class="wrapper">
+				<a href="http://cashtag.net"><img src="css/images/logo.png" alt="Cas#tag" class="logo"/></a>
+				<ul class="nav">
+					<li><a href="http://cashtag.net/login">Log In</a></li>
+					<li><a href="http://cashtag.net/personal_tracker/">Become a VIP</a></li>
+					<li><a href="http://cashtag.net/register/">Become a Partner</a></li>
+					<li><a href="http://cashtag.net/pages/about">About</a></li>
+					<li><a href="http://cashtag.net/contact/">Contact</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<section class="first">
+			<div class="wrapper">
+				<h1>It Pays to Gossip<div id="hero-chats"></div></h1>
+				<img src="css/images/envelope.png" alt="Send money" id="envelope" class="icon-img"/>
+				<h3>Refer friends to cash-back and you'll each earn $50 bucks!</h3>
+				<div class="info-box">
+					<p>You get<br><span>$50</span></p>
+				</div>
+				<div class="info-box">	
+					<p>They get<br><span>$50+</span></p>
+				</div>
+			</div>
+		</section>
+
+		<section class="form">
+			<div class="wrapper">
+				<div class="instructions">
+					<p>You (or your friend) <span class="color">must</span> use this link to make<br>an account with <u>cash-back</u> to be in our program.</p>
+					<p>(Copy it to friends. You'll each earn $50 and they'll earn cash-back)</p>
+					<div class="link-copy">
+						https://account.skrill.com/signup?rid=24668847
+					</div>
+				</div>
+			</div>
+			<form class="radio-toggle">
+				<div class="question">
+					<input type="radio" name="radio" value="existing" id="existing" class="radio"/>
+					<label for="existing">Does your friend have an existing account?</label>
+				</div>
+				<span>OR</span>
+				<div class="question">
+					<input type="radio" name="radio" value="new" id="new" class="radio"/>
+					<label for="new">Does your friend need a new Skrill account?</label>
+				</div>
+			</form>
+
+			<form id="google-form-existing" target="_self" onsubmit="" action="javascript: postToGoogle()">
+				<fieldset>
+					<label for="your-email">Your Skrill E-mail<br>(so we can pay you $50)</label>
+					<input class="form-input" id="your-email" type="email" name="yourEmail">
+					<a class="under">&nbsp;</a>
+				</fieldset>
+				<fieldset>
+					<label for="friend-email">Your Friend's Skrill E-mail<br>(so we can pay your friend $50)</label>
+					<input class="form-input" id="friend-email" type="email" name="yourEmail">
+					<a class="under">&nbsp;</a>
+				</fieldset>
+				<fieldset>
+					<label for="skrill-customer-id">Your Friend's Customer ID #</label>
+					<input class="form-input" id="skrill-customer-id" type="text" name="customerIdSkrill">
+					<a class="under what">What's this?</a>
+					<img class="screenshot" src="css/images/customer-id-instruction.png"/>
+				</fieldset>
+				<div>
+					<button id="send" type="submit">Submit</button>
+				</div>
+			</form>
+
+			<form id="google-form-new" target="_self" onsubmit="" action="javascript: postToGoogleNew()">
+				<p>Copy and paste this link to friends.</p>
+				<div class="link-copy small">
+					https://account.skrill.com/signup?rid=24668847
+				</div>
+				<p>When they're done making an account through this link, enter their account information so you'll each earn $50.</p>
+				<fieldset>
+					<label for="new-your-email">Your Skrill E-mail<br>(so we can pay you $50)</label>
+					<input class="form-input" id="new-your-email" type="email" name="yourEmailNew">
+					<a class="under">&nbsp;</a>
+				</fieldset>
+				<fieldset>
+					<label for="new-friend-email">Your Friend's Skrill E-mail<br>(so we can pay your friend $50)</label>
+					<input class="form-input" id="new-friend-email" type="email" name="yourEmailNew">
+					<a class="under">&nbsp;</a>
+				</fieldset>
+				<fieldset>
+					<label for="new-customer-id">Your Friend's Customer ID #</label>
+					<input class="form-input" id="new-customer-id" type="text" name="customerIdNew">
+					<a class="under what">What's this?</a>
+					<img class="screenshot" src="css/images/customer-id-instruction.png"/>
+				</fieldset>
+				
+				<div>
+					<button id="send" type="submit">Submit</button>
+				</div>
+			</form>
+
+			<div class="submitted">Thank you!</div>
+
+		</section>
+
+		<section class="black">
+			<div class="wrapper">
+				<h2>How Does It Work?</h2>
+				<hr>
+				<div class="steps">
+					<div class="one">
+						<img src="css/images/howitworks.png" alt="Refer a friend" class="icon-img"/>
+						<p><span>1</span></p>
+						<p>Refer a friend (new or existing user) and receive $50</p>
+					</div>
+					<div class="two">
+						<img src="css/images/money.png" alt="$50" class="icon-img"/>
+						<p><span>2</span></p>
+						<p>Your friend gets $50 in their account</p>
+					</div>
+					<div class="three">
+						<img src="css/images/envelope_how_it_works.png" alt="Cash back" class="icon-img"/>
+						<p><span>3</span></p>
+						<p>Your friend also receives <u>cash-back</u> too!</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="rules">
+			<div class="wrapper">
+				<h2>Rules</h2>
+				<hr>
+			</div>
+			<p>Each $50 Bonus (you can earn as many as you want) are paid directly to each account on two conditions:</p>
+			<div class="steps">
+				<div class="one">
+					<p><span>1</span></p>
+					<p>Skrill approves your friend for cash-back</p>
+				</div>
+				<div class="two">
+					<p><span>2</span></p>
+					<p>Your friend deposits $1,000 into the promotion period</p>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="wrapper">
+				<p>Feel free to contact us with any question, anytime.</p>
+				<div class="footer-contact">
+					<ul>
+						<li><a href="skype:Sublime8700?chat"><i class="fa fa-skype" aria-hidden="true"></i>Sublime8700</a></li>
+						<li><a href="skype:CashTagTeam?chat"><i class="fa fa-skype" aria-hidden="true"></i>CashTagTeam</a></li>
+						<li><a href="mailto:harry@cashtag.net"><i class="fa fa-envelope" aria-hidden="true"></i>Harry@cashtag.net</a></li>
+						<li><a href="mailto:ewalletvipmanager@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>Ewalletvipmanager@gmail.com</a></li>
+					</ul>
+				</div>
+				<div class="footer-link">
+					<ul>
+						<li><a href="http://cashtag.net/pages/about">About Us</a></li>
+						<li><a href="http://cashtag.net/contact/">Contact Us</a></li>
+						<li><a href="http://cashtag.net/pages/terms-and-conditions">Terms & Conditions</a></li>
+					</ul>
+				</div>
+				<p class="trademark">CashTag&#8482; 2015</p>
+			</div>
+		</footer>
+	</div>
+	<!--Google Form Submit-->
+	<script type="text/javascript">
+		function postToGoogle(){
+			var yourEmail = $('#your-email').val();
+			var friendEmail = $('#friend-email').val();
+			var customerId = $('#customer-id').val();
+
+			$.ajax({
+				url: "https://docs.google.com/a/masechoi.com/forms/d/1kYFtGDDE_flrD9f1h5kfwUYLMuLB1qP_-L6Zu0PZ9YA/formResponse",
+				data: {"entry.1377584570" : yourEmail, "entry.980627666" : friendEmail, "entry.376320068": customerId},
+				type: "POST",
+				dataType: "xml",
+				statusCode: {
+					0: function (){
+
+						$('#your-email').val("");
+						$('#friend-email').val("");
+						$('#customer-id').val("");
+                    //Success message
+                    console.log("successful submission");
+                    $(".submitted").show();
+                    $("#google-form-existing").hide();
+                },
+                200: function (){
+                	$('#your-email').val("");
+                	$('#friend-email').val("");
+                	$('#customer-id').val("");
+                    //Success Message
+                    console.log("successful submission");
+                    $(".submitted").show();
+                    $("#google-form-existing").hide();
+                }
+            }
+        });
+		}
+		$(document).ready(function() {
+			$("#google-form-existing").submit(function() {
+				postToGoogle();
+				return false;
+			});
+		});
+
+		function postToGoogleNew(){
+			var yourEmailNew = $('#new-your-email').val();
+			var friendEmailNew = $('#new-friend-email').val();
+			var customerIdNew = $('#new-customer-id').val();
+
+			$.ajax({
+				url: "https://docs.google.com/a/masechoi.com/forms/d/1kYFtGDDE_flrD9f1h5kfwUYLMuLB1qP_-L6Zu0PZ9YA/formResponse",
+				data: {"entry.1377584570" : yourEmailNew, "entry.980627666" : friendEmailNew, "entry.376320068": customerIdNew},
+				type: "POST",
+				dataType: "xml",
+				statusCode: {
+					0: function (){
+
+						$('#new-your-email').val("");
+						$('#new-friend-email').val("");
+						$('#new-customer-id').val("");
+                    //Success message
+                    console.log("successful submission");
+                    $(".submitted").show();
+                    $("#google-form-new").hide();
+                    $('html, body').animate({
+                        scrollTop: $('label[for=new]').offset().top
+                        }, 400);
+                },
+                200: function (){
+                	$('#your-email').val("");
+                	$('#friend-email').val("");
+                	$('#customer-id').val("");
+                    //Success Message
+                    console.log("successful submission");
+                    $(".submitted").show();
+                    $("#google-form-new").hide();
+                    $('html, body').animate({
+                        	scrollTop: $('label[for=new]').offset().top
+                        }, 400);
+                }
+            }
+        });
+		}
+		$(document).ready(function() {
+			$("#google-form-new").submit(function() {
+				postToGoogleNew();
+				return false;
+			});
+		});
+	</script>
+</body>
+</html>

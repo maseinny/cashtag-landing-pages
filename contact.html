@@ -1,0 +1,140 @@
+<html>
+<head>
+	<title>2016 Rakeback / VIP Request</title>
+	<link rel="stylesheet" tyle="text/css" href="css/style.css" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+</head>
+
+<body>
+	<ul class="mobile-nav">
+		<li><a href="http://cashtag.net/login">Log In</a></li>
+		<li><a href="http://cashtag.net/personal_tracker/">Become a VIP</a></li>
+		<li><a href="http://cashtag.net/register/">Become a Partner</a></li>
+		<li><a href="http://cashtag.net/pages/about">About</a></li>
+		<li><a href="http://cashtag.net/contact/">Contact</a></li>
+	</ul>
+	<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+	<label for="nav-trigger"></label>
+	<div class="site-wrap">
+		<header>
+			<div class="wrapper">
+				<a href="http://cashtag.net"><img src="css/images/logo.png" alt="Cas#tag" class="logo"/></a>
+				<ul class="nav">
+					<li><a href="http://cashtag.net/login">Log In</a></li>
+					<li><a href="http://cashtag.net/personal_tracker/">Become a VIP</a></li>
+					<li><a href="http://cashtag.net/register/">Become a Partner</a></li>
+					<li><a href="http://cashtag.net/pages/about">About</a></li>
+					<li><a href="http://cashtag.net/contact/">Contact</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<section class="contact-submitted first">
+			<p>Thank you! Your message has been sent.</p>
+		</section>
+
+		<section class="contact first">
+			<h2>2016 Rakeback / VIP Request</h2>
+			<hr>
+			<form id="rakeback" target="_self" onsubmit="" action="javascript: postToGoogleRakeback()">
+				<fieldset>
+					<label for="setup">What Skins/Networks Do You Want Set-Ups On? *<br>Tell us about what you need and where you want to play. We'll contact you.</label>
+					<textarea class="form-input" id="setup" name="setup" required></textarea>
+					<p class="required">* required</p>
+				</fieldset>
+				<fieldset>
+					<label for="skype">What's Your Skype Address?</label>
+					<input class="form-input" id="skype" type="text" name="skype"/>
+				</fieldset>
+				<fieldset>
+					<label for="email">What's Your E-mail Address?</label>
+					<input class="form-input" id="email" type="email" name="email"/>
+				</fieldset>
+				<fieldset>
+					<label for="anything">Anything Else We Can Do For You? Anything you need - we can try to help!</label>
+					<textarea class="form-input" id="anything" name="anything"></textarea>
+				</fieldset>
+				<div>
+					<button id="contact-send" type="submit">Submit</button>
+				</div>
+			</form>
+		</section>
+
+		<footer>
+			<div class="wrapper">
+				<p>Feel free to contact us with any question, anytime.</p>
+				<div class="footer-contact">
+					<ul>
+						<li><a href="skype:Sublime8700?chat"><i class="fa fa-skype" aria-hidden="true"></i>Sublime8700</a></li>
+						<li><a href="skype:CashTagTeam?chat"><i class="fa fa-skype" aria-hidden="true"></i>CashTagTeam</a></li>
+						<li><a href="mailto:harry@cashtag.net"><i class="fa fa-envelope" aria-hidden="true"></i>Harry@cashtag.net</a></li>
+						<li><a href="mailto:ewalletvipmanager@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>Ewalletvipmanager@gmail.com</a></li>
+					</ul>
+				</div>
+				<div class="footer-link">
+					<ul>
+						<li><a href="http://cashtag.net/pages/about">About Us</a></li>
+						<li><a href="http://cashtag.net/contact/">Contact Us</a></li>
+						<li><a href="http://cashtag.net/pages/terms-and-conditions">Terms & Conditions</a></li>
+					</ul>
+				</div>
+				<p class="trademark">CashTag&#8482; 2015</p>
+			</div>
+		</footer>
+	</div>
+	<!--Google Form Submit-->
+	<script type="text/javascript">
+		function postToGoogleRakeback(){
+			var setup = $('#setup').val();
+			var skype = $('#skype').val();
+			var email = $('#email').val();
+			var anything = $('#anything').val();
+			
+			$.ajax({
+				url: "https://docs.google.com/a/masechoi.com/forms/d/1qv_3orfTrfV4Ziiu65xMj2ejXgWvWMVFA6tT5EFw3ak/formResponse",
+				data: {"entry.651468701" : setup, "entry.1039372952" : skype, "entry.951068021": email, "entry.924806466": anything},
+				type: "POST",
+				dataType: "xml",
+				statusCode: {
+					0: function (){
+
+						$('#setup').val("");
+						$('#skype').val("");
+						$('#email').val("");
+						$('#anything').val("");
+                        //Success message
+                        console.log("successful submission");
+                        $(".contact-submitted").show();
+                        $('html, body').animate({
+                        	scrollTop: $('header').offset().top
+                        }, 400);
+                    },
+                    200: function (){
+                    	$('#setup').val("");
+                    	$('#skype').val("");
+                    	$('#email').val("");
+                    	$('#anything').val("");
+                        //Success Message
+                        console.log("successful submission");
+                        $(".contact-submitted").show();
+                        $('html, body').animate({
+                        	scrollTop: $('header').offset().top
+                        }, 400);
+                    }
+                }
+            });
+		}
+		$(document).ready(function() {
+			$("#rakeback").submit(function() {
+				postToGoogleRakeback();
+				return false;
+			});
+		});
+	</script>
+</body>
+</html>
